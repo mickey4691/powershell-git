@@ -24,11 +24,12 @@ $global:FileName = "SchedulingPanelStatus " + $DateTime
 Out-File -FilePath $PSScriptRoot\$FileName.txt
 #endregion File Creation
 
-
+// create an IpV4 Regex match format
 $IpV4RegEx = '^(([0-9]|[0-9][0-9]|1[0-9][0-9]|[0-2][0-9][0-5]).([0-9]|[0-9][0-9]|1[0-9][0-9]|[0-2][0-9][0-5]).([0-9]|[0-9][0-9]|1[0-9][0-9]|[0-2][0-9][0-5]).([0-9]|[0-9][0-9]|1[0-9][0-9]|[0-2][0-9][0-5]))$'
 
 foreach ($deviceIp in $IPs)
 {
+    // validate user info data matches regex formatting.
     if ($deviceIp -match $ipV4RegEx)
     {
         Try
