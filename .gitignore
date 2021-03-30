@@ -22,3 +22,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Ignore custom files
+*.xml
+*.txt
